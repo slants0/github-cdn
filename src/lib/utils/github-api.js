@@ -10,4 +10,4 @@ const githubApi = got.extend({
 	},
 });
 
-module.exports = githubApi;
+export default githubApi;

@@ -1,5 +1,4 @@
-export = resolveRef;
-declare function resolveRef(args: any): Promise<{
+export default function resolveRef(args: any): Promise<{
     type: string;
     ref: any;
 } | {

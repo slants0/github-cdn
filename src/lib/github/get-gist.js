@@ -7,7 +7,7 @@ const config = require('../utils/config');
 
 const cacheDuration = 10000;
 
-function getGist({
+export default function getGist({
 	token = github.token,
 	gistId,
 	path = '',
@@ -57,6 +57,3 @@ function getGist({
 		},
 	});
 }
-
-
-module.exports = getGist;

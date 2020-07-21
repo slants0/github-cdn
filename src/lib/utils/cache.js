@@ -19,4 +19,4 @@ const cache = new Keyv({
 
 cache.on('error', (err) => log('[keyv error]', err));
 
-module.exports = cache;
+export default cache;

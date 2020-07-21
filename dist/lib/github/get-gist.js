@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const got = require('got');
 const cacheFallback = require('../utils/cache-fallback');
 const githubApi = require('../utils/github-api');
@@ -45,4 +47,4 @@ function getGist({ token = github.token, gistId, path = '', }) {
         },
     });
 }
-module.exports = getGist;
+exports.default = getGist;

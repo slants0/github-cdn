@@ -7,7 +7,7 @@ const resError = require('../utils/res-error');
 
 const cacheDuration = 10000;
 
-function getPath({
+export default function getPath({
 	token = github.token,
 	owner,
 	repo,
@@ -56,6 +56,3 @@ function getPath({
 		},
 	});
 }
-
-
-module.exports = getPath;

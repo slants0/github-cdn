@@ -1,2 +1,2 @@
-export = githubApi;
+export default githubApi;
 declare const githubApi: any;

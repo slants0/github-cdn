@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const qs = require('querystring');
 const nodePath = require('path');
 const cacheFallback = require('../utils/cache-fallback');
@@ -41,4 +43,4 @@ function getPath({ token = github.token, owner, repo, ref, path = '', }) {
         },
     });
 }
-module.exports = getPath;
+exports.default = getPath;

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const { getRemoteInfo: igGetRemoteInfo } = require('isomorphic-git');
 const http = require('isomorphic-git/http/node');
 const { github } = require('../utils/config');
@@ -24,4 +26,4 @@ async function getRemoteInfo({ token = github.token, owner, repo, }) {
         },
     });
 }
-module.exports = getRemoteInfo;
+exports.default = getRemoteInfo;

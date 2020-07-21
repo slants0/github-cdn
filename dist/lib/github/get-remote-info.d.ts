@@ -1,9 +1,5 @@
-export = getRemoteInfo;
-declare function getRemoteInfo({ token, owner, repo, }: {
-    token?: string;
+export default function getRemoteInfo({ token, owner, repo, }: {
+    token?: any;
     owner: any;
     repo: any;
-}): Promise<{
-    source: any;
-    data: any;
-}>;
+}): Promise<any>;

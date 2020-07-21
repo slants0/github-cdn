@@ -1,7 +1,7 @@
 const log = require('./log');
 const cache = require('./cache');
 
-async function cacheFallback({
+export default async function cacheFallback({
 	cacheDuration,
 	key,
 	request,
@@ -57,5 +57,3 @@ async function cacheFallback({
 
 	return result;
 }
-
-module.exports = cacheFallback;

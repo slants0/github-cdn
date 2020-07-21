@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const Keyv = require('keyv');
 const log = require('./log');
 const { memcached } = require('./config');
@@ -16,4 +18,4 @@ const cache = new Keyv({
     store,
 });
 cache.on('error', (err) => log('[keyv error]', err));
-module.exports = cache;
+exports.default = cache;

@@ -1,9 +1,9 @@
-const log = require('../lib/utils/log');
-const getRemoteInfo = require('../lib/github/get-remote-info');
-const config = require('../lib/utils/config');
-const route = require('../lib/utils/route');
+import log from '../lib/utils/log';
+import getRemoteInfo from '../lib/github/get-remote-info';
+import config from '../lib/utils/config';
+import route from '../lib/utils/route';
 
-module.exports = route(async (req, res) => {
+export default route(async (req, res) => {
 	log('[req:get-repo]', req.url);
 
 	const query = { ...req.cookies, ...req.query, ...req.params };

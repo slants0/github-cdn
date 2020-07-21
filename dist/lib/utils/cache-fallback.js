@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const log = require('./log');
 const cache = require('./cache');
 async function cacheFallback({ cacheDuration, key, request, }) {
@@ -50,4 +52,4 @@ async function cacheFallback({ cacheDuration, key, request, }) {
     }
     return result;
 }
-module.exports = cacheFallback;
+exports.default = cacheFallback;

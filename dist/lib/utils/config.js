@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const assert = require('assert');
 const { cosmiconfigSync } = require('cosmiconfig');
 const escapeRegExp = require('lodash/escapeRegExp');
@@ -55,4 +57,4 @@ class Config {
             && (!gists || (gists && whitelistItem.gists))));
     }
 }
-module.exports = new Config();
+exports.default = Config;

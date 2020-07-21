@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const got = require('got');
 const { github } = require('./config');
 const githubApi = got.extend({
@@ -8,4 +10,4 @@ const githubApi = got.extend({
         Accept: 'application/vnd.github.v3.raw+json',
     },
 });
-module.exports = githubApi;
+exports.default = githubApi;

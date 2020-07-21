@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const resError = require('./res-error');
 const helpers = {
     redirect(statusCode, dest) {
@@ -23,4 +25,4 @@ const route = (fn) => (req, res) => {
             .send({ err: err.message });
     });
 };
-module.exports = route;
+exports.default = route;

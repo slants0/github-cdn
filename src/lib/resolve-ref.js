@@ -1,7 +1,7 @@
 const semver = require('semver');
 const getRemoteInfo = require('./github/get-remote-info');
 
-async function resolveRef(args) {
+export default async function resolveRef(args) {
 	let { ref } = args;
 
 	if (ref) {
@@ -24,5 +24,3 @@ async function resolveRef(args) {
 
 	return { type: 'branch' };
 }
-
-module.exports = resolveRef;

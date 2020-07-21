@@ -1,4 +1,4 @@
-export = badgen;
+export default badgen;
 declare function badgen({ repo, ref }: {
     repo: any;
     ref: any;

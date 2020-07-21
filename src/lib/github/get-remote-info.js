@@ -6,7 +6,7 @@ const resError = require('../utils/res-error');
 
 const cacheDuration = 10000;
 
-async function getRemoteInfo({
+export default async function getRemoteInfo({
 	token = github.token,
 	owner,
 	repo,
@@ -31,5 +31,3 @@ async function getRemoteInfo({
 		},
 	});
 }
-
-module.exports = getRemoteInfo;

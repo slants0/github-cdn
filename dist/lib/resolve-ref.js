@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const semver = require('semver');
 const getRemoteInfo = require('./github/get-remote-info');
 async function resolveRef(args) {
@@ -19,4 +21,4 @@ async function resolveRef(args) {
     }
     return { type: 'branch' };
 }
-module.exports = resolveRef;
+exports.default = resolveRef;

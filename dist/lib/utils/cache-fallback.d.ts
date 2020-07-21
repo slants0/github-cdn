@@ -1,5 +1,4 @@
-export = cacheFallback;
-declare function cacheFallback({ cacheDuration, key, request, }: {
+export default function cacheFallback({ cacheDuration, key, request, }: {
     cacheDuration: any;
     key: any;
     request: any;

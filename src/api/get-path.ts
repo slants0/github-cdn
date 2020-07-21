@@ -1,10 +1,10 @@
-const mime = require('mime');
-const log = require('../lib/utils/log');
-const resolveRef = require('../lib/resolve-ref');
-const badgenUrl = require('../lib/badgen-url');
-const getPath = require('../lib/github/get-path');
-const config = require('../lib/utils/config');
-const route = require('../lib/utils/route');
+import mime from 'mime';
+import log from '../lib/utils/log';
+import resolveRef from '../lib/resolve-ref';
+import badgenUrl from '../lib/badgen-url';
+import getPath from '../lib/github/get-path';
+import config from '../lib/utils/config';
+import route from '../lib/utils/route';
 
 const constructUrl = ({
 	owner, repo, ref, badge, path = '',

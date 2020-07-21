@@ -1,5 +1,5 @@
-const config = require('../lib/utils/config');
-const log = require('../lib/utils/log');
+import config from '../lib/utils/config';
+import log from '../lib/utils/log';
 
 const assets = {
 	js: [
@@ -103,7 +103,7 @@ const landingTpl = `
 </html>
 `;
 
-module.exports = (req, res) => {
+export default (req, res) => {
 	log('[req:serve-landing]', req.url);
 	res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
 	res.send(landingTpl);

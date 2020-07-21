@@ -7,7 +7,7 @@ const GITHUB_PUBLIC_API = 'https://api.github.com';
 
 const str2regexp = (str) => new RegExp(`^${escapeRegExp(str)}$`);
 
-class Config {
+export default class Config {
 	github = {
 		base: GITHUB_PUBLIC,
 		apiBase: undefined,
@@ -71,5 +71,3 @@ class Config {
 		);
 	}
 }
-
-module.exports = new Config();

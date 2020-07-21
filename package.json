@@ -25,7 +25,7 @@
     "api",
     "index.js"
   ],
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "cd dev-server && DEBUG=github-cdn nodemon . --watch ..",
     "lint": "eslint .",

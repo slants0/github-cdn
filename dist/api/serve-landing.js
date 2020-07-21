@@ -1,5 +1,10 @@
-const config = require('../lib/utils/config');
-const log = require('../lib/utils/log');
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const config_1 = __importDefault(require("../lib/utils/config"));
+const log_1 = __importDefault(require("../lib/utils/log"));
 const assets = {
     js: [
         'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js',
@@ -18,7 +23,7 @@ const landingTpl = `
 	<meta name="keywords" content="Github, CDN">
 	<meta name="author" content="Hiroki Osame">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preload" href="${config.landingPageMdSrc}" as="fetch">
+	<link rel="preload" href="${config_1.default.landingPageMdSrc}" as="fetch">
 	${assets.css.map((s) => `<link rel="preload" href="${s}" as="style">`).join('')}
 	${assets.js.map((s) => `<link rel="preload" href="${s}" as="script">`).join('')}
 	<style>
@@ -46,7 +51,7 @@ const landingTpl = `
 	<div id="md" class="markdown-body">Loading...</div>
 	${assets.js.map((s) => `<script src="${s}" defer></script>`).join('')}
 	<script type="text/javascript">
-	fetch('${config.landingPageMdSrc}')
+	fetch('${config_1.default.landingPageMdSrc}')
 		.then(r => r.text())
 		.then(mdStr => {
 			md.innerHTML = marked(mdStr);
@@ -101,7 +106,7 @@ const landingTpl = `
 </html>
 `;
 module.exports = (req, res) => {
-    log('[req:serve-landing]', req.url);
+    log_1.default('[req:serve-landing]', req.url);
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     res.send(landingTpl);
 };

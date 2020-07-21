@@ -1,9 +1,9 @@
-const { Router } = require('express');
-const serveLanding = require('./api/serve-landing');
-const getRatelimit = require('./api/get-ratelimit');
-const getRepo = require('./api/get-repo');
-const getPath = require('./api/get-path');
-const getGist = require('./api/get-gist');
+import { Router } from 'express';
+import serveLanding from './api/serve-landing';
+import getRatelimit from './api/get-ratelimit';
+import getRepo from './api/get-repo';
+import getPath from './api/get-path';
+import getGist from './api/get-gist';
 
 function githubCdnRouter() {
 	const router = Router();

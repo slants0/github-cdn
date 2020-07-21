@@ -1,9 +1,9 @@
-const log = require('../lib/utils/log');
-const githubApi = require('../lib/utils/github-api');
-const { github } = require('../lib/utils/config');
-const route = require('../lib/utils/route');
+import log from '../lib/utils/log';
+import githubApi from '../lib/utils/github-api';
+import { github } from '../lib/utils/config';
+import route from '../lib/utils/route';
 
-module.exports = route(async (req, res) => {
+export default route(async (req, res) => {
 	log('[req:get-ratelimit]', req.url);
 
 	const [token, source] = (() => {

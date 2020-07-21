@@ -32,4 +32,4 @@ const route = (fn) => (req, res) => {
 	);
 };
 
-module.exports = route;
+export default route;
